@@ -6,6 +6,7 @@ module.exports = async (req, res) => {
     const data = await apiRes.json();
     res.status(200).json(data);
   } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch data' });
+    console.error('API call failed:', error);
+    res.status(500).json({ error: 'Failed to fetch data from API' });
   }
 };

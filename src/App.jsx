@@ -12,6 +12,23 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       setIsLoading(true);
+  //       const data = await fetchTickets();
+  //       setTickets(data.tickets);
+  //       setUsers(data.users);
+  //       setIsLoading(false);
+  //     } catch (err) {
+  //       console.error("Error in fetchData:", err);
+  //       setError(`Failed to fetch data: ${err.message}`);
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   fetchData();
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,9 +43,9 @@ function App() {
         setIsLoading(false);
       }
     };
-
+  
     fetchData();
-
+  
     const savedGrouping = localStorage.getItem('grouping');
     const savedSorting = localStorage.getItem('sorting');
     if (savedGrouping) setGrouping(savedGrouping);
