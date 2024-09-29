@@ -16,12 +16,7 @@ function App() {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        console.log('Fetching data...');
         const data = await fetchTickets();
-        console.log('Data received:', data);
-        if (!data.tickets || !data.users) {
-          throw new Error('Invalid data structure received');
-        }
         setTickets(data.tickets);
         setUsers(data.users);
         setIsLoading(false);
@@ -67,24 +62,20 @@ function App() {
 
   return (
     <div className="App">
-      {isLoading && <div>Loading...</div>}
-      {error && <div>Error: {error}</div>}
-      {!isLoading && !error && (
-        <>
-          <Header 
-            grouping={grouping} 
-            sorting={sorting}
-            onGroupingChange={handleGroupingChange}
-            onSortingChange={handleSortingChange}
-          />
-          <KanbanBoard 
-            tickets={tickets} 
-            users={users} 
-            grouping={grouping} 
-            sorting={sorting}
-          />
-        </>
-      )}
+      <Header 
+        grouping={grouping} 
+        sorting={sorting}
+        onGroupingChange={handleGroupingChange}
+        onSortingChange={handleSortingChange}
+      />
+      <KanbanBoard 
+        tickets={tickets} 
+        users={users} 
+        grouping={grouping} 
+        sorting={sorting}
+        onStatusChange={handleStatusChange}
+        onAddTicket={handleAddTicket}
+      />
     </div>
   );
 }

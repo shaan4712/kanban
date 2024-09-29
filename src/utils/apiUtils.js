@@ -1,25 +1,14 @@
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/.netlify/functions/api' 
+  ? '/api/proxy' 
   : 'https://api.quicksell.co/v1/internal/frontend-assignment';
 
 export const fetchTickets = async () => {
-  console.log('Fetching tickets from:', API_URL);
   try {
     const response = await fetch(API_URL);
-    console.log('Response status:', response.status);
-    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    
-    const contentType = response.headers.get("content-type");
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new Error("Oops! We haven't received a JSON response");
-    }
-    
     const data = await response.json();
-    console.log('Parsed data:', data);
-    
     return data;
   } catch (error) {
     console.error('Error fetching data:', error);
