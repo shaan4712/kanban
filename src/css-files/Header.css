@@ -1,0 +1,28 @@
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .display-button {
+    display: flex;
+    align-items: center;
+    background-color: #f4f5f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .display-button .display-icon {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .display-button .down{
+    margin-left: 8px;
+  }
