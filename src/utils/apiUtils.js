@@ -12,6 +12,11 @@ export const fetchTickets = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error("Oops! We haven't received a JSON response");
+    }
+    
     const data = await response.json();
     console.log('Parsed data:', data);
     

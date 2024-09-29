@@ -67,20 +67,24 @@ function App() {
 
   return (
     <div className="App">
-      <Header 
-        grouping={grouping} 
-        sorting={sorting}
-        onGroupingChange={handleGroupingChange}
-        onSortingChange={handleSortingChange}
-      />
-      <KanbanBoard 
-        tickets={tickets} 
-        users={users} 
-        grouping={grouping} 
-        sorting={sorting}
-        onStatusChange={handleStatusChange}  
-        onAddTicket={handleAddTicket}
-      />
+      {isLoading && <div>Loading...</div>}
+      {error && <div>Error: {error}</div>}
+      {!isLoading && !error && (
+        <>
+          <Header 
+            grouping={grouping} 
+            sorting={sorting}
+            onGroupingChange={handleGroupingChange}
+            onSortingChange={handleSortingChange}
+          />
+          <KanbanBoard 
+            tickets={tickets} 
+            users={users} 
+            grouping={grouping} 
+            sorting={sorting}
+          />
+        </>
+      )}
     </div>
   );
 }
