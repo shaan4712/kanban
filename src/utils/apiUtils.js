@@ -12,10 +12,7 @@ export const fetchTickets = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     
-    const text = await response.text();
-    console.log('Raw response:', text);
-    
-    const data = JSON.parse(text);
+    const data = await response.json();
     console.log('Parsed data:', data);
     
     return data;
