@@ -26,11 +26,29 @@ function Card({ ticket, user, grouping, onStatusChange, onUpdateTicket }) {
     onStatusChange(ticket.id, nextStatus);
   };
 
+  const createInitials = (name) => {
+    // Check if the name is a valid string
+    if (typeof name !== 'string' || !name.trim()) {
+        return ""; // Return an empty string for invalid names
+    }
+    // Split the name into parts by space (first name and last name)
+    const nameParts = name.split(' ');
+    // Generate initials from the first character of the first and second names
+    const initials = nameParts.length > 1 
+        ? nameParts[0].charAt(0) + nameParts[1].charAt(0) // If there are two name parts
+        : nameParts[0].charAt(0); // If there is only one name part (single name)
+    return initials.toUpperCase(); // Convert initials to uppercase
+  };
+
+
   return (
     <div className="card">
       <div className="card-header">
         <span className="ticket-id">{ticket.id}</span>
-        {user && <img src={user.avatar} alt={user.name} className="user-avatar" />}
+        {/* {user && <img src={createInitials(user.name)} alt={user.name} className="user-avatar" />} */}
+        <div className="user-avatar">
+          {user && createInitials(user.name)}
+        </div>
       </div>
       <h3 className="card-title">
       {(grouping === 'user' || grouping === 'priority') && (

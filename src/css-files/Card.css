@@ -19,9 +19,16 @@
 }
 
 .user-avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+  background: #538455; 
+  color: white; 
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  width: 30px;
+  height: 30px;
+  font-size: 14px; 
 }
 
 .card-title {
