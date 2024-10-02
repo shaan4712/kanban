@@ -19,7 +19,7 @@
 }
 
 .user-avatar {
-  background: #538455; 
+  background:  hsl(200, 50%, 20%);; 
   color: white; 
   border-radius: 50%; 
   display: flex;
