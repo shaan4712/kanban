@@ -12,16 +12,16 @@ A dynamic Kanban board built with React for visualizing and managing tickets wit
 
 ## Features
 
-- **Grouping Options**: Group tickets by
+**Grouping Options**: Group tickets by
  - Status 
  - User
  - Priority
 
-- **Sorting Options**:
+**Sorting Options**:
  - Priority (Highest to Lowest)
  - Title (A-Z)
 
-- **Functionalities**:
+**Functionalities**:
  - Add new tickets
  - Change ticket status
  - Dynamic card counts
