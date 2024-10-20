@@ -2,6 +2,9 @@
 
 A dynamic Kanban board built with React for visualizing and managing tickets with customizable grouping and sorting options.
 
+## Live Link
+[Kanban Board](https://kanban-self-omega.vercel.app/)
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
@@ -9,6 +12,12 @@ A dynamic Kanban board built with React for visualizing and managing tickets wit
 - [Usage](#usage)
 - [API Integration](#api-integration) 
 - [Build & Deploy](#build-and-deploy)
+
+![image](https://github.com/user-attachments/assets/8d938281-e005-49a9-9eb1-23cb92f6b5bf)
+
+![image](https://github.com/user-attachments/assets/ca0e9bc0-18c9-43ab-97db-0cf9da539700)
+
+![image](https://github.com/user-attachments/assets/aea2d920-22e4-44c3-8c75-01362b5b2ccb)
 
 ## Features
 
