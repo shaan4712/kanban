@@ -74,8 +74,9 @@ src/
 │   └── status/                     # Status icons
 ├── App.js                          # Main application component
 └── index.js                        # Entry point
+```
 
-3. Start Development Server
+Start Development Server
 ```bash
 npm start
 ```
