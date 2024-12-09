@@ -1,38 +1,33 @@
 .display-options {
-    position: absolute;
-    top: 50px;
-    left: 20px;
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    z-index: 1000;
-  } 
-  
-  .option-group {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .option-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #6b6f76;
-    padding: 10px 20px;
-    margin-right: 40px;
-  }
-  
-  .option-group select {
-    width: 100%;
-    padding: 2px 15px;
-    border: 1px solid #e0e0e0;
-    border-radius: 3px;
-    font-size: 14px;
-    margin-right: 10px;
-  }
+  position: absolute;
+  top: calc(100% + 8px);  /* Position below button with 8px gap */
+  right: 0;               /* Align with right edge of button */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+  min-width: 220px;
+}
 
-  
+.option-group {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-group label {
+  color: #6b6f76;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.option-group select {
+  padding: 2px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  font-size: 14px;
+  width: 120px;
+}
